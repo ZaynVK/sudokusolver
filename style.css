@@ -96,3 +96,26 @@ button {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
+/* Prefilled or solved cells */
+.solved {
+  background-color: #d4edda !important;
+  color: #155724;
+  font-weight: bold;
+}
+
+/* User typed cells */
+.user-input {
+  background-color: #ffffff;
+  color: #222;
+}
+
+/* Focus */
+td:focus {
+  background-color: #cce5ff !important;
+}
+
+/* Invalid highlight */
+.invalid {
+  background-color: #f8d7da !important;
+  color: #721c24;
+}
