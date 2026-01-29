@@ -1,50 +1,98 @@
-table {
-  background-color: #f5f5f5;
-}
+/* Page Background */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-image: url('back.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  backdrop-filter: blur(3px);
+  margin: 0;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: url('back.jpg') center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.padd {
-  color: white;
-}
-h1 {
-  font-size: 3em;
-}
-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
+
+/* Glass Card Container */
+#container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.2em;
-  margin-top: 15px;
-  cursor: pointer;
+  backdrop-filter: blur(10px);
 }
+
+/* Title */
+h1 {
+  font-size: 2.7em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Logo */
 img {
-  border-radius: 70%;
+  height: 90px;
+  margin-bottom: 10px;
+  border-radius: 50%;
 }
 
-button:hover {
-  opacity: 0.8;
+/* Sudoku Board */
+table {
+  border-collapse: collapse;
+  margin: 0 auto 20px;
 }
 
-#clear-button {
-  background-color: red;
-  color: white;
+td {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #aaa;
+  font-size: 1.6em;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+/* 3x3 Grid Borders */
+tr:nth-child(3n) td { border-bottom: 3px solid #333; }
+td:nth-child(3n) { border-right: 3px solid #333; }
+tr:nth-child(1) td { border-top: 3px solid #333; }
+td:nth-child(1) { border-left: 3px solid #333; }
+
+td:focus {
+  outline: none;
+  background-color: #e6f2ff;
+  transform: scale(1.05);
+}
+
+/* Buttons */
+button {
+  margin: 10px;
+  padding: 12px 28px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 10px;
   border: none;
-  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Solve Button */
+#solve-button {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+#solve-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* Clear Button */
+#clear-button {
+  background: linear-gradient(135deg, #dc3545, #b21f2d);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
 }
 
 #clear-button:hover {
-  background-color: darkred;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
