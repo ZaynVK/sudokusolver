@@ -3,29 +3,7 @@
   <title>Sudoku Solver - Play and Solve Sudoku Puzzles Online</title>
   <script type="text/javascript" src="sudoku.js"></script>
   <script type="text/javascript" src="analytics.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <style type="text/css">
-
-    body { font-family: Calibri, sans-serif; }
-    #container { text-align: center }
-    table { border-collapse: collapse; font-size: 2em; margin: 0 auto; }
-    colgroup, tbody { border: solid medium; }
-    td { border: solid thin; height: 1.4em; width: 1.4em; text-align: center; padding: 0; }
-    button { margin-top: 15px; font-size: 1.5em; }
-
-    padd{padding-bottom: 100px;}
-    ]
-  </style>
-  <style>
-  body {
-    background-image: url('back.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(2px);
-  }
-</style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -53,14 +31,15 @@
        <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
        <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
        <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
-    </table>
-    <div>
-      <button id="solve-button">Solve!</button>
-    </div>
-    <div>
-      <button id="clear-button">Clear board</button>
-    </div>
-  </div>
+    <table id="sudoku-board">
+  <tbody>
+    <!-- 9 rows -->
+    ${Array(9).fill(`
+    <tr>
+      ${Array(9).fill('<td contenteditable="true"></td>').join('')}
+    </tr>`).join('')}
+  </tbody>
+</table>
 </body>
 
 <script type="text/javascript">
