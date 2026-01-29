@@ -24,16 +24,16 @@ h1 {
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.2em;
-    margin-top: 15px;
-    cursor: pointer;
+background-color: #4CAF50;
+color: white;
+  margin-top: 15px;
+  font-size: 1.5em;
+  padding: 12px 28px;
+  border-radius: 30px;       /* Rounded edges */
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 img {
